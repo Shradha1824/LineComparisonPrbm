@@ -44,5 +44,13 @@ public class LineComparisonPrbm {
 	scan.close();
 	Length = Math.sqrt(Math.pow(x2-x1, 2) + (Math.pow(y2-y1,  2)));
 	System.out.println("The Length is " + decform.format(Length));
- }
+
+        int compareValue = Double.compare(Length1,Length2);
+        if (compareValue == 0)
+            System.out.println("line1 and lines are equal");
+        else if (compareValue < 0)
+            System.out.println("lines1 is less than lines2");
+        else
+            System.out.println("lines1 is greater than lines2");
+     }
 }
